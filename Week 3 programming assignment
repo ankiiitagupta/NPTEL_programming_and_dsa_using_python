@@ -1,4 +1,4 @@
-#function 1
+#Function 1
 def expanding(l):
   b=[]
   for i in range(len(l)-1):
@@ -12,7 +12,7 @@ def expanding(l):
       return False
   return True
 
-#function 2
+#Function 2
 def sumsquare(l):
   a=0
   b=0
@@ -27,7 +27,7 @@ def sumsquare(l):
   res.append(a)
   return res
 
-#function 3
+#Function 3
 def transpose(m):
   res=[]
   
