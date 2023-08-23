@@ -1,0 +1,38 @@
+#function 1
+def histogram(l):
+  c={}
+  for i in l:
+    if i not in c:
+      c[i]=0
+    c[i]=c[i]+1 
+                  
+  ans=[]
+  for i,j in c.items():
+       ans.append((i,j))
+  
+  ans.sort(key=lambda pair:(pair[1],pair[0]))
+      
+  return ans
+
+#function 2
+def transcript(coursedetails,studentdetails,grades):
+  course_dict= dict(coursedetails)
+  student_dict= dict(studentdetails)
+  
+  stgrades={}
+  
+  for roll, course,grade in grades:
+    if roll not in stgrades:
+      stgrades[roll]=[]
+    stgrades[roll].append((course,course_dict[course], grade))
+    
+  list1=[]
+  
+  for roll,name in studentdetails:
+    if roll in stgrades:
+      list1.append((roll, name, sorted(stgrades[roll], key=lambda x:x[0])))
+      
+  list1.sort()
+  
+  return list1
+  
